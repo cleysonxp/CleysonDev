@@ -1,0 +1,192 @@
+/* Tailwind layers */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Tema & Paleta (ajustaremos depois) ---------- */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #0ea5e9;
+  /* Azul tech */
+  --primary-contrast: #0b0c10;
+  --muted: #f3f4f6;
+  --border: #e5e7eb;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+/* ---------- COMPONENTES UTILITÁRIOS ---------- */
+@layer components {
+
+  /* Botões padrão */
+  .btn {
+    @apply inline-block px-5 py-2 font-medium rounded-lg transition-colors duration-200;
+  }
+
+  /* Botão sólido (cor principal) */
+  .btn-primary {
+    /* @apply bg-[var(--primary)] text-[var(--primary-contrast)] hover:opacity-90; */
+    @apply bg-[var(--primary)] text-[var(--primary-contrast)] hover:bg-[#0284c7];
+  }
+
+  /* Botão com borda */
+  .btn-outline {
+    @apply border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--primary-contrast)];
+  }
+
+  /* Botão desabilitado */
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Seção padrão */
+  .section {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+
+  /* Título de seção */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-[var(--primary)];
+  }
+
+  /* Texto padrão */
+  .text-muted {
+    @apply text-gray-400 leading-relaxed;
+  }
+
+  /* Card genérico */
+  .card {
+    @apply bg-[var(--muted)] border border-[var(--border)] rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  /* Animação de hover leve */
+  .hover-rise {
+    @apply transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300;
+  }
+}
+
+
+
+/* Dark mode automático via prefers-color-scheme */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #38bdf8;
+    /* Azul claro */
+    --primary-contrast: #0a0a0a;
+    --muted: #111418;
+    --border: #22252b;
+  }
+}
+
+
+/* ---------- Elementos globais ---------- */
+
+html {
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+/* Seleção de texto mais legível */
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-contrast);
+}
+
+
+/* Links padrão (caso não use classes Tailwind nos links) */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- Animações ---------- */
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+  will-change: transform;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- Utilitários opcionais ---------- */
+
+
+/* Bordas e superfícies consistentes quando precisar sem Tailwind */
+
+.surface {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+
+/* Classe de título padrão (se quiser usar fora do Tailwind) */
+
+.h-title {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* underline animation like stripe / vercel */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  width: 0%;
+  left: 25%;
+  width: 50%;
+}
+
+.nav-link:hover::after {
+  width: 50%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}

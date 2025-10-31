@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import Link from "next/link";
+import { useTheme } from "@/components/ThemeContext"; // ✅ Hook do tema
 
 export function Navbar() {
+  const { theme, toggleTheme } = useTheme(); // ✅ estado do tema
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("sobre");
@@ -23,7 +25,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 10);
 
       const sections = links.map((l) => document.getElementById(l.id));
-      const offset = window.scrollY + 120; // compensar navbar
+      const offset = window.scrollY + 120;
 
       for (let section of sections) {
         if (!section) continue;
@@ -34,7 +36,7 @@ export function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // rodar uma vez ao carregar
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,7 +55,7 @@ export function Navbar() {
           Cleyson.dev
         </Link>
 
-        <nav className="hidden md:flex gap-6 text-sm">
+        <nav className="hidden md:flex gap-6 text-sm items-center">
           {links.map((link) => (
             <a
               key={link.href}
@@ -65,6 +67,14 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+
+          {/* ✅ Botão de Tema */}
+          {/* <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg border border-[var(--border)] hover:bg-[var(--muted)] transition"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button> */}
         </nav>
 
         <button onClick={() => setOpen(!open)} className="md:hidden">
@@ -89,6 +99,16 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+
+            {/* ✅ Toggle no mobile também */}
+            <li>
+              {/* <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg border border-[var(--border)] hover:bg-[var(--muted)] transition mx-auto"
+              >
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </button> */}
+            </li>
           </ul>
         </nav>
       )}

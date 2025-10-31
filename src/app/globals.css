@@ -94,7 +94,6 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: var(--font-sans);
   animation: fadeIn 0.4s ease-in-out;
 }
@@ -189,4 +188,102 @@ a:hover {
 
 .nav-link.active::after {
   width: 100%;
+}
+
+/* .bg-dark {
+  background-color: #080808;
+}
+
+.bg-dark-alt {
+  background-color: #0b0b0b;
+} */
+
+.bg-section {
+  background-color: var(--bg-1);
+}
+
+.bg-section-alt {
+  background-color: var(--bg-2);
+}
+
+.card-contrast {
+  background-color: var(--bg-2);
+  border: 1px solid var(--border);
+}
+
+.bg-section-alt .card-contrast {
+  background-color: var(--bg-1);
+}
+
+/* LIGHT MODE */
+:root[data-theme='light'] {
+  --background: #f7f9fc;
+  --foreground: #0a0a0a;
+  --primary: #2563eb;
+  --primary-contrast: #ffffff;
+  --muted: #eef1f6;
+  --border: rgba(0, 0, 0, 0.08);
+
+  /* Layers */
+  --bg-1: #f7f9fc;
+  /* background principal */
+  --bg-2: #ffffff;
+  /* cards */
+  --grid-color: rgba(0, 0, 0, 0.06);
+  --grid-glow: rgba(37, 99, 235, 0.08);
+}
+
+/* DARK MODE */
+:root[data-theme='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #38bdf8;
+  --primary-contrast: #0a0a0a;
+  --muted: #111418;
+  --border: #22252b;
+
+  /* Layers */
+  --bg-1: #0a0a0a;
+  /* fundo principal */
+  --bg-2: #0f1216;
+  /* fundo alternado (um tom acima) */
+  --grid-color: rgba(255, 255, 255, 0.06);
+  --grid-glow: rgba(0, 140, 255, 0.10);
+}
+
+/* Background utility classes */
+.bg-dark {
+  background-color: var(--bg-1);
+}
+
+.bg-dark-alt {
+  background-color: var(--bg-2);
+}
+
+/* Optional shared card style (se precisar) */
+.card {
+  background-color: var(--bg-2);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: var(--foreground);
+  border-radius: 12px;
+}
+
+/* Card da carreira */
+.card-career {
+  background-color: var(--bg-2);
+}
+
+/* Dark mode — força o contraste #0f0f0f */
+:root[data-theme='dark'] .card-career {
+  background-color: #0f0f0f !important;
+}
+
+:root[data-theme='light'] .card-career {
+  background-color: #f7f9fc !important;
+  color: #0f0f0f;
+}
+
+:root[data-theme='light'] p {  
+  color: #0f0f0f;
 }

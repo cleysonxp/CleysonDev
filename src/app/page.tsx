@@ -1,3 +1,5 @@
+"use client";
+
 import { Sobre } from "@/components/sections/Sobre";
 import { Formacao } from "@/components/sections/Formacao";
 import { Carreira } from "@/components/sections/Carreira";

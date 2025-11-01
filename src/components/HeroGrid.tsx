@@ -1,3 +1,5 @@
+"use client";
+
 export default function HeroGrid() {
   return (
     <div className="absolute inset-0 z-0 pointer-events-none">

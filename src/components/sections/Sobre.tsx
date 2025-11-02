@@ -65,7 +65,7 @@ export function Sobre() {
             </a>
 
             <a
-              href="https://linkedin.com/in/cleysonsoares"
+              href="https://www.linkedin.com/in/cleyson49409a104753g4y80957/"
               target="_blank"
               className="btn btn-outline"
             >

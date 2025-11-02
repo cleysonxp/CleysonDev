@@ -8,7 +8,7 @@ export function Footer() {
 
   const redes = [
     { icon: <Github size={20} />, url: "https://github.com/cleysonxp" },
-    { icon: <Linkedin size={20} />, url: "https://linkedin.com/in/cleysonsoares" },
+    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/cleyson49409a104753g4y80957/" },
     { icon: <Mail size={20} />, url: "mailto:cleyson.soares.dev@gmail.com" },
     { icon: <FaWhatsapp size={20} />, url: "https://wa.me/5511988936899" }, // seu número aqui
   ];

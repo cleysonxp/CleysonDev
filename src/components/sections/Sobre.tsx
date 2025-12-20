@@ -65,7 +65,7 @@ export function Sobre() {
           <div className="absolute w-80 h-80 rounded-full animate-spin-slow bg-gradient-to-tr from-[var(--primary)] via-sky-400 to-[var(--primary)] blur-[15px] opacity-70"></div>
 
           <img
-            src="/perfil.jpg"
+            src="/perfil2.jpeg"
             alt="Cleyson Soares"
             className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-[0_0_40px_-10px_var(--primary)] border-2 border-[var(--primary)] relative z-10"
           />

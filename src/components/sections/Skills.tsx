@@ -53,6 +53,7 @@ export function Skills() {
         { nome: "CSS", nivel: 3 },
         { nome: "Tailwind", nivel: 3 },
         { nome: "Bootstrap", nivel: 4 },
+        { nome: "TypeScript", nivel: 3 },
         { nome: "Flutter", nivel: 1 },
         { nome: "Dart", nivel: 1 },
         { nome: "Kotlin", nivel: 2 },

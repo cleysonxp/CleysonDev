@@ -47,7 +47,7 @@ export function Sobre() {
           <div className="flex flex-wrap justify-center lg:justify-start gap-4">
             <a href="mailto:cleyson.soares.dev@gmail.com" className="btn btn-outline">Email</a>
             <a href="https://wa.me/5511988936899" target="_blank" className="btn btn-outline">WhatsApp</a>
-            <a href="https://www.linkedin.com/in/cleysonxp" target="_blank" className="btn btn-outline">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/cleysondev" target="_blank" className="btn btn-outline">LinkedIn</a>
             <a href="https://github.com/cleysonxp" target="_blank" className="btn btn-outline">GitHub</a>
             <a download href="/CV_Cleyson_Soares.pdf" className="btn btn-primary">Download CV</a>
           </div>

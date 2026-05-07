@@ -26,14 +26,18 @@ export function SobreDetalhado() {
               <Sparkles className="w-5 h-5" />
               Quem sou
             </h3>
+
             <p>
-              Sou Cleyson Soares, desenvolvedor full stack com foco em back-end e APIs.
-              Tenho experiência com desenvolvimento de sistemas internos e aplicações web,
-              integrando tecnologias como <strong>.NET, PHP, Java, React e MySQL</strong>.
+              Sou Cleyson Soares, desenvolvedor full stack com foco em back-end,
+              APIs e arquitetura de sistemas. Tenho experiência no desenvolvimento
+              e manutenção de aplicações corporativas, atuando principalmente com
+              <strong> C#, .NET, PHP, React e bancos relacionais</strong>.
             </p>
+
             <p>
-              Comecei na programação pela curiosidade e hoje sou apaixonado por construir
-              soluções úteis, escaláveis e que realmente façam diferença no negócio.
+              Ao longo da minha trajetória participei da evolução de sistemas internos,
+              integrações entre plataformas e automação de processos de negócio,
+              sempre com foco em performance, organização e escalabilidade.
             </p>
           </motion.div>
 
@@ -49,13 +53,17 @@ export function SobreDetalhado() {
               <Code className="w-5 h-5" />
               Minha forma de trabalhar
             </h3>
+
             <p>
-              Tenho perfil analítico, gosto de entender o problema antes de escrever código
-              e trabalho com foco em clareza, organização e qualidade.
+              Tenho perfil analítico e orientado à resolução de problemas.
+              Gosto de entender o contexto do negócio antes de desenvolver soluções,
+              priorizando clareza, qualidade e manutenibilidade do código.
             </p>
+
             <p>
-              Já atuei com metodologias ágeis, versionamento com Git, e em ambientes em produção
-              com sistemas críticos usados por áreas como operação, financeiro e diretoria.
+              Trabalho com boas práticas como Clean Code, SOLID e versionamento com Git,
+              além de experiência em ambientes ágeis e sistemas críticos utilizados
+              por operações internas e áreas estratégicas.
             </p>
           </motion.div>
 
@@ -71,13 +79,17 @@ export function SobreDetalhado() {
               <Target className="w-5 h-5" />
               Objetivos
             </h3>
+
             <p>
-              Busco me especializar cada vez mais em desenvolvimento back-end, arquiteturas de software,
-              integrações e cloud — com foco em criar sistemas robustos, seguros e escaláveis.
+              Meu foco é evoluir cada vez mais em desenvolvimento back-end,
+              arquitetura de software, integrações e cloud computing,
+              construindo sistemas robustos, seguros e escaláveis.
             </p>
+
             <p>
-              No curto prazo, meu foco é me desenvolver como <strong>Analista de Sistemas / Back-End</strong>
-              e evoluir para áreas como arquitetura e cloud.
+              Busco oportunidades onde eu possa contribuir tecnicamente,
+              crescer como engenheiro de software e participar de projetos
+              com impacto real no negócio.
             </p>
           </motion.div>
         </div>
